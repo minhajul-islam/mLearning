@@ -12,6 +12,7 @@
     "react-native": "0.58.6",
     "react-native-autocomplete-input": "^3.6.0",
     "react-native-contacts": "^4.0.0",
+    "react-native-contacts-wrapper": "^0.2.4",
     "react-native-pin-view": "^2.1.0",
     "react-native-smooth-pincode-input": "^1.0.3",
     "react-navigation": "^3.5.1"

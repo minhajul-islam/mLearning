@@ -5,16 +5,21 @@ import contacts from '../src/contact';
 import {
     StyleSheet,
     View,
-    Image
+    Image,
+    TouchableOpacity,
+    Text,
+    PermissionsAndroid
 } from 'react-native';
 
-
+import ContactsWrapper from 'react-native-contacts-wrapper';
 class ContactSearch extends Component {
 
 
     constructor(props) {
         super(props);
         this.state = {
+            name:"mmmm",
+            number:"8888",
             contacts: [{
                 "name": "minhaj",
                 "number": "01515-272948",
@@ -200,6 +205,35 @@ class ContactSearch extends Component {
         };
     }
 
+    pickContact = async () => {
+
+            try {
+                const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS);
+                if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+                    ContactsWrapper.getContact()
+                        .then((contact) => {
+                            // Replace this code
+                            this.setState({
+                                name: contact.name,
+                                number: contact.phone,
+                            });
+                        })
+                        .catch((error) => {
+                            console.log("ERROR CODE: ", error.code);
+                            console.log("ERROR MESSAGE: ", error.message);
+                        });
+
+
+                } else {
+                    console.log("Contact permission denied")
+                }
+
+
+            } catch (err) {
+                console.warn(err)
+            }
+
+    };
     componentDidMount() {
        // get contact
     }
@@ -218,6 +252,9 @@ class ContactSearch extends Component {
         this.setState({query: item})
     }
 
+    setContact(name,number) {
+        this.setState({name: name,number:number})
+    }
     render() {
         const {query} = this.state;
         const contacts = this.findContact(query);
@@ -246,7 +283,13 @@ class ContactSearch extends Component {
                         source={{uri: "https://www.livedigi.com/uploaded/untitled%20folder/Topup%20Online.png"}}
                         style={{width: 200, height: 300}}
                     />
-
+                    <TouchableOpacity onPress = {this.pickContact}>
+                        <View>
+                            <Text >Open Contact</Text>
+                            <Text >{this.state.name}</Text>
+                            <Text >{this.state.number}</Text>
+                        </View>
+                    </TouchableOpacity>
 
                 </View>
             </View>
