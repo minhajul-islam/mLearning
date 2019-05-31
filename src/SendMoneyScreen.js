@@ -19,6 +19,7 @@ import EditTextNext from "../../components/EditTextNext";
 import Contacts from 'react-native-contacts';
 import ContactView from '../../components/ContactView';
 import DotLoader from "../../components/DotLoader";
+import TempComponent from "./TempComponent";
 
 class SendMoneyScreen extends Component {
 
@@ -454,6 +455,7 @@ class SendMoneyScreen extends Component {
                 }}>
                     <View style={styles.container}>
 
+
                         <EditTextNext
                             placeholder='Enter name or number'
                             avater={this.state.avater}
@@ -498,7 +500,9 @@ class SendMoneyScreen extends Component {
                             updateCellsBatchingPeriod={10}
                         />
 
-
+                        <TempComponent
+                            text={"dfmfdm"}
+                        />
                     </View>
 
 

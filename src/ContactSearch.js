@@ -12,230 +12,138 @@ import {
 } from 'react-native';
 
 import ContactsWrapper from 'react-native-contacts-wrapper';
+import TempComponent from "./TempComponent";
+import RowOfFlatList from "./RowOfFlatList";
+import TempActivity from "./TempActivity";
+
 class ContactSearch extends Component {
 
 
     constructor(props) {
         super(props);
         this.state = {
-            name:"mmmm",
-            number:"8888",
-            contacts: [{
-                "name": "minhaj",
-                "number": "01515-272948",
-                "thumbnail": ""
-            },
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ,
-                {
-                    "name": "korim",
-                    "number": "01768-386145",
-                    "thumbnail": ""
-                },
-                {
-                    "name": "rohime",
-                    "number": "+880 1841-016216",
-                    "thumbnail": ""
-                }
-                ],
+            name: "mmmm",
+            number: "8888",
+             contacts: [
+                             {
+                                 "name": "minhaj",
+                                 "number": "01515-272948",
+                                 "thumbnail": ""
+                             },
+                             {
+                                 "name": "korim",
+                                 "number": "01768-386145",
+                                 "thumbnail": ""
+                             },
+                             {
+                                 "name": "rohime",
+                                 "number": "+880 1841-016216",
+                                 "thumbnail": ""
+                             }
+                             ,
+                             {
+                                 "name": "korim",
+                                 "number": "01768-386145",
+                                 "thumbnail": ""
+                             },
+                             {
+                                 "name": "rohime",
+                                 "number": "+880 1841-016216",
+                                 "thumbnail": ""
+                             }
+                             ,
+                             {
+                                 "name": "korim",
+                                 "number": "01768-386145",
+                                 "thumbnail": ""
+                             },
+                             {
+                                 "name": "rohime",
+                                 "number": "+880 1841-016216",
+                                 "thumbnail": ""
+                             }
+                             ,
+                             {
+                                 "name": "korim",
+                                 "number": "01768-386145",
+                                 "thumbnail": ""
+                             },
+                             {
+                                 "name": "rohime",
+                                 "number": "+880 1841-016216",
+                                 "thumbnail": ""
+                             }
+                             ,
+                             {
+                                 "name": "korim",
+                                 "number": "01768-386145",
+                                 "thumbnail": ""
+                             },
+                             {
+                                 "name": "rohime",
+                                 "number": "+880 1841-016216",
+                                 "thumbnail": ""
+                             }
+                             ,
+                             {
+                                 "name": "korim",
+                                 "number": "01768-386145",
+                                 "thumbnail": ""
+                             },
+                             {
+                                 "name": "rohime",
+                                 "number": "+880 1841-016216",
+                                 "thumbnail": ""
+                             }
+                             ,
+                             {
+                                 "name": "korim",
+                                 "number": "01768-386145",
+                                 "thumbnail": ""
+                             }
+                             ,
+                             {
+                                 "name": "rohime",
+                                 "number": "+880 1841-016216",
+                                 "thumbnail": ""
+                             }
+                         ],
             query: ''
         };
     }
 
     pickContact = async () => {
 
-            try {
-                const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS);
-                if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-                    ContactsWrapper.getContact()
-                        .then((contact) => {
-                            // Replace this code
-                            this.setState({
-                                name: contact.name,
-                                number: contact.phone,
-                            });
-                        })
-                        .catch((error) => {
-                            console.log("ERROR CODE: ", error.code);
-                            console.log("ERROR MESSAGE: ", error.message);
+        try {
+            const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS);
+            if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+                ContactsWrapper.getContact()
+                    .then((contact) => {
+                        // Replace this code
+                        this.setState({
+                            name: contact.name,
+                            number: contact.phone,
                         });
+                    })
+                    .catch((error) => {
+                        console.log("ERROR CODE: ", error.code);
+                        console.log("ERROR MESSAGE: ", error.message);
+                    });
 
 
-                } else {
-                    console.log("Contact permission denied")
-                }
-
-
-            } catch (err) {
-                console.warn(err)
+            } else {
+                console.log("Contact permission denied")
             }
 
+
+        } catch (err) {
+            console.warn(err)
+        }
+
     };
+
     componentDidMount() {
-       // get contact
+        // get contact
     }
 
     findContact(query) {
@@ -252,9 +160,14 @@ class ContactSearch extends Component {
         this.setState({query: item})
     }
 
-    setContact(name,number) {
-        this.setState({name: name,number:number})
+    setContact(name, number) {
+        this.setState({name: name, number: number})
     }
+
+    onClick() {
+
+    }
+
     render() {
         const {query} = this.state;
         const contacts = this.findContact(query);
@@ -262,10 +175,28 @@ class ContactSearch extends Component {
 
         return (
             <View style={styles.container}>
+
+                <TempComponent
+                    text={"dfmfdm"}
+                    onClick={this.onClick}
+                />
+
+                <RowOfFlatList
+                    onClickItem={() => this.onClick}
+                    title={"title"}
+                    number={"number"}
+                />
+
+                <TempActivity/>
+
+                <ContactView title={'Minhajul isalm'}
+                             number={'01162616216'}
+                             thumbnail={''}
+                             onClickItem={() => this.onClick}/>
                 <Autocomplete
                     autoCapitalize="none"
                     autoCorrect={false}
-                    listStyle={{height:200}}
+                    listStyle={{height: 200}}
                     containerStyle={styles.autocompleteContainer}
                     data={contacts.length === 1 && comp(query, contacts[0].name) ? [] : contacts}
                     defaultValue={query}
@@ -283,11 +214,11 @@ class ContactSearch extends Component {
                         source={{uri: "https://www.livedigi.com/uploaded/untitled%20folder/Topup%20Online.png"}}
                         style={{width: 200, height: 300}}
                     />
-                    <TouchableOpacity onPress = {this.pickContact}>
+                    <TouchableOpacity onPress={this.pickContact}>
                         <View>
-                            <Text >Open Contact</Text>
-                            <Text >{this.state.name}</Text>
-                            <Text >{this.state.number}</Text>
+                            <Text>Open Contact</Text>
+                            <Text>{this.state.name}</Text>
+                            <Text>{this.state.number}</Text>
                         </View>
                     </TouchableOpacity>
 
